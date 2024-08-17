@@ -67,7 +67,7 @@ public class EmployeeController {
         updateEmployee.setEmailId(employeeDetails.getEmailId());
 
         employeeRepository.save(updateEmployee);
-
+        logger.info("Updated employee with id: {}", id);
         return ResponseEntity.ok(updateEmployee);
     }
 
